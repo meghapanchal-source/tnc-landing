@@ -225,14 +225,16 @@ p:last-child {
   background-color: #270f17;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .hero-video-wrapper {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 0.82;
   width: 100%;
   background-color: #000000;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .hero-video-thumbnail {
