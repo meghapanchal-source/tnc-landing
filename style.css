@@ -226,6 +226,8 @@ p:last-child {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   border-radius: 12px;
+  position: relative;
+  width: 75%;
 }
 
 .hero-video-wrapper {
@@ -310,11 +312,26 @@ p:last-child {
 }
 
 .hero-video-caption {
+  position: absolute;
+  width: 100%;
+  z-index: 102;
+  text-align: center;
+  bottom: 10px;
   padding: 0.75rem 1rem;
   font-size: 0.75rem;
   font-weight: 600;
   color: rgba(246, 245, 243, 0.92);
-  background-color: #200a12;
+  /* background-color: #200a12; */
+}
+
+.hero-video-wrapper:after {
+  content: "";
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
+  z-index: 101;
 }
 
 /* Stop Collecting Advice Section */
