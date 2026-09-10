@@ -1,0 +1,981 @@
+/* TNC MasterClass Editorial Design System
+   Exact Color, Typography, Button, and Spacing match to TNC_Bloating_Masterclass_Landing_Page PDF */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+
+:root {
+  --font-family:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  /* Exact sampled colors from TNC_Bloating_Masterclass_Landing_Page PDF */
+  --bg-burgundy: #3d1925;
+  --bg-cream: #f7f3ea;
+  --bg-blush: #f3e8e4;
+  --bg-card: #ffffff;
+  --bg-footer: #11100e;
+
+  --text-dark: #231f16;
+  --text-muted: #665f59;
+  --text-light: #f6f5f3;
+  --text-burgundy: #4d222e;
+  --text-burgundy-light: #d5bca9;
+
+  --rule-subtle: #dfd5cb;
+  --rule-blush: #ded0c9;
+  --rule-burgundy: #532933;
+  --rule-lined: #dfd7cf;
+  --strikethrough-color: #6e6460;
+
+  --btn-cream-bg: #e2c9ab;
+  --btn-cream-hover: #d6bc9d;
+  --btn-cream-text: #3d1925;
+
+  --container-max: 1240px;
+  --reading-width: 620px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.62;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Typography Scale */
+.eyebrow {
+  display: block;
+  font-size: clamp(0.65rem, 0.85vw, 0.725rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.25rem;
+  color: var(--text-burgundy);
+}
+
+.eyebrow-light {
+  color: var(--text-burgundy-light);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: inherit;
+}
+
+.hero-title {
+  font-size: clamp(2.3rem, 3.8vw, 3.8rem);
+  line-height: 1.06;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3vw, 2.9rem);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+p {
+  font-size: clamp(0.95rem, 1.05vw, 1.0625rem);
+  line-height: 1.64;
+  color: var(--text-dark);
+  margin-bottom: 1.15rem;
+  font-weight: 400;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.narrow-text {
+  max-width: var(--reading-width);
+}
+
+/* Fluid Container & Controlled Section Spacing */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 2.75rem);
+}
+
+.section-block {
+  padding-top: clamp(2.75rem, 4.5vw, 4rem);
+  padding-bottom: clamp(2.75rem, 4.5vw, 4rem);
+}
+
+.section-block-tight {
+  padding-top: clamp(1.75rem, 3vw, 2.75rem);
+  padding-bottom: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.section-block-bottom {
+  padding-top: 0;
+  padding-bottom: clamp(2.75rem, 4.5vw, 4rem);
+}
+
+/* Background Tone Blocks */
+.bg-burgundy {
+  background-color: var(--bg-burgundy);
+  color: var(--text-light);
+}
+
+.bg-burgundy p {
+  color: rgba(246, 245, 243, 0.9);
+}
+
+.bg-cream {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+}
+
+.bg-blush {
+  background-color: var(--bg-blush);
+  color: var(--text-dark);
+}
+
+/* Exact Button Styling */
+.btn-reserve {
+  display: inline-block;
+  background-color: var(--btn-cream-bg);
+  color: var(--btn-cream-text);
+  font-family: var(--font-family);
+  font-size: clamp(0.7rem, 0.8vw, 0.775rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.95rem 1.85rem;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-reserve:hover {
+  background-color: var(--btn-cream-hover);
+}
+
+/* ===================================================
+   PAGE 1: HERO & STOP COLLECTING ADVICE
+   =================================================== */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 440px);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+}
+
+.hero-subhead {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #f6f5f3;
+  margin-bottom: 1.15rem;
+}
+
+.hero-meta-block {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(246, 245, 243, 0.2);
+}
+
+.hero-meta-line1 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e2c9ab;
+  margin-bottom: 0.3rem;
+}
+
+.hero-meta-line2 {
+  font-size: 0.75rem;
+  color: rgba(246, 245, 243, 0.75);
+}
+
+.hero-video-box {
+  background-color: #270f17;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.hero-video-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  width: 100%;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.hero-video-thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.hero-video-wrapper.is-playing .hero-video-thumbnail {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  background-color: rgba(61, 25, 37, 0.85);
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero-video-thumbnail:hover .play-circle {
+  transform: translate(-50%, -50%) scale(1.08);
+  background-color: rgba(83, 41, 51, 0.95);
+}
+
+.play-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 15px;
+  border-color: transparent transparent transparent #ffffff;
+  margin-left: 3px;
+}
+
+.hero-video-iframe-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.hero-video-caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(246, 245, 243, 0.92);
+  background-color: #200a12;
+}
+
+/* Stop Collecting Advice Section */
+.stop-advice-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.narrative-emphasis {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.quote-aside {
+  border-left: 2px solid var(--rule-burgundy);
+  padding-left: 2.25rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.quote-aside blockquote {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--text-burgundy);
+  margin-bottom: 1.25rem;
+}
+
+.quote-aside-author {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ===================================================
+   PAGE 2: WHAT HAVE YOU ALREADY CUT & EMOTIONAL STATEMENT
+   =================================================== */
+
+.cut-grid {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.notebook-lined-list {
+  list-style: none;
+  border-top: 1px solid var(--rule-lined);
+}
+
+.notebook-row {
+  border-bottom: 1px solid var(--rule-lined);
+  padding: 0.85rem 0;
+}
+
+.crossed-word {
+  position: relative;
+  display: inline-block;
+  font-size: 1.15rem;
+  color: #726862;
+  font-weight: 500;
+}
+
+.crossed-word::after {
+  content: "";
+  position: absolute;
+  top: 52%;
+  left: -2%;
+  width: 104%;
+  height: 1.5px;
+  background-color: var(--strikethrough-color);
+}
+
+.cut-verdict {
+  margin-top: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Emotional Statement */
+.emotional-column {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 2.25rem;
+}
+
+.emotional-stmt-1 {
+  font-size: clamp(1.8rem, 3.2vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--text-burgundy);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.emotional-stmt-2 {
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--text-burgundy);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ===================================================
+   PAGE 3 & 4: WHAT YOU GET BACK & THE WORK IN 90 MINS
+   =================================================== */
+
+.get-back-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  align-items: start;
+  border-top: 1px solid var(--rule-subtle);
+  padding-top: 2.75rem;
+}
+
+.simple-checklist {
+  list-style: none;
+}
+
+.checklist-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: baseline;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--rule-subtle);
+  font-size: 0.975rem;
+  font-weight: 500;
+}
+
+.checklist-row:first-child {
+  padding-top: 0;
+}
+
+.checklist-row:last-child {
+  border-bottom: none;
+}
+
+.check-tick {
+  color: var(--text-burgundy);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* 90 Mins Parts Grid */
+.work-parts-stack {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--rule-blush);
+}
+
+.work-part-row {
+  display: grid;
+  grid-template-columns: 140px 240px 1fr;
+  gap: 2.5rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--rule-blush);
+  align-items: start;
+}
+
+.work-part-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-burgundy);
+}
+
+.work-part-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-burgundy);
+  line-height: 1.22;
+}
+
+.work-part-desc {
+  font-size: 0.95rem;
+  line-height: 1.62;
+}
+
+/* Major Closing Statement & Strip */
+.closing-statement-wrap {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.closing-statement-text {
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  font-weight: 700;
+  color: var(--text-burgundy);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.compact-cta-strip {
+  background-color: var(--bg-burgundy);
+  padding: 2rem 0;
+}
+
+.compact-cta-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.compact-cta-message {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #e2c9ab;
+  max-width: 600px;
+}
+
+/* ===================================================
+   PAGE 5: RECOGNISE YOUR OWN PATTERN
+   =================================================== */
+
+.pattern-contained-panel {
+  background-color: #eee4de;
+  border: 1px solid #e2d4cb;
+  padding: 1.75rem;
+  margin-top: 2rem;
+}
+
+.pattern-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.pattern-item-card {
+  background-color: #ffffff;
+  padding: 1.6rem 1.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.pattern-quote-text {
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--text-burgundy);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.pattern-explanation {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ===================================================
+   PAGE 6: WHAT WE ARE DELIBERATELY NOT
+   =================================================== */
+
+.deliberately-list {
+  list-style: none;
+  margin-top: 2.25rem;
+  border-top: 1px solid var(--rule-subtle);
+  max-width: 900px;
+}
+
+.deliberately-row {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 1.25rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--rule-subtle);
+  align-items: start;
+}
+
+.circle-badge {
+  width: 24px;
+  height: 24px;
+  background-color: var(--text-burgundy);
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.deliberately-text {
+  font-size: 0.975rem;
+  line-height: 1.6;
+}
+
+/* ===================================================
+   PAGE 7: A FEW OTHER THINGS & WHAT YOU WALK AWAY WITH
+   =================================================== */
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.deliverables-stack {
+  list-style: none;
+}
+
+.deliverable-entry {
+  padding: 1.45rem 0;
+  border-bottom: 1px solid var(--rule-blush);
+}
+
+.deliverable-entry:first-child {
+  padding-top: 0;
+}
+
+.deliverable-entry:last-child {
+  border-bottom: none;
+}
+
+.deliverable-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-burgundy);
+  margin-bottom: 0.35rem;
+}
+
+.deliverable-info {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ===================================================
+   PAGE 8: MEET POOJA & FAQ
+   =================================================== */
+
+.bio-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.bio-photo-box {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background-color: #ede2db;
+}
+
+.bio-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.credentials-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.15rem;
+  line-height: 1.45;
+}
+
+/* FAQ Accordions */
+.faq-accordion-container {
+  border-top: 1px solid var(--rule-subtle);
+}
+
+.faq-row {
+  border-bottom: 1px solid var(--rule-subtle);
+}
+
+.faq-toggle-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.faq-toggle-btn:hover {
+  color: var(--text-burgundy);
+}
+
+.faq-chevron {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: transform 0.25s ease;
+}
+
+.faq-row.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-row.active .faq-answer-panel {
+  max-height: 350px;
+}
+
+.faq-answer-text {
+  padding-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   PAGE 9: FINAL PRICE & FOOTER
+   =================================================== */
+
+.final-price-grid {
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.price-spec-list {
+  list-style: none;
+  margin-bottom: 1.75rem;
+}
+
+.price-spec-item {
+  font-size: 1.05rem;
+  color: rgba(246, 245, 243, 0.92);
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+.price-spec-item strong {
+  color: #ffffff;
+}
+
+.site-footer {
+  background-color: var(--bg-footer);
+  color: rgba(246, 245, 243, 0.7);
+  padding: 2.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: rgba(246, 245, 243, 0.55);
+}
+
+/* Video Modal Popup */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 4, 6, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.modal-backdrop.open,
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 920px;
+  position: relative;
+  aspect-ratio: 16/9;
+  background-color: #000;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  overflow: hidden;
+  transform: scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.open .modal-box,
+.modal-backdrop.active .modal-box {
+  transform: scale(1);
+}
+
+.modal-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #f6f5f3;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: #e2c9ab;
+  transform: scale(1.15);
+}
+
+/* ===================================================
+   FLUID RESPONSIVE LAYOUT RULES
+   =================================================== */
+
+@media (max-width: 1200px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 390px);
+    gap: 3rem;
+  }
+
+  .stop-advice-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(260px, 340px);
+    gap: 3rem;
+  }
+
+  .cut-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 500px);
+    gap: 3rem;
+  }
+
+  .two-col-layout,
+  .bio-layout,
+  .final-price-grid {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .stop-advice-grid,
+  .cut-grid,
+  .get-back-grid,
+  .two-col-layout,
+  .bio-layout,
+  .final-price-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .quote-aside {
+    margin-top: 0;
+    padding-left: 1.5rem;
+  }
+
+  .work-part-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+  }
+
+  .compact-cta-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .compact-cta-message {
+    max-width: 100%;
+  }
+
+  .bio-photo-box {
+    max-width: 320px;
+  }
+
+  .modal-close-btn {
+    top: -36px;
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-block {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
+  }
+
+  .emotional-stmt-2,
+  .closing-statement-text {
+    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+}
+
+/* ===================================================
+   ZOOM 20% FOR SCREENS WIDER THAN 1550px
+   =================================================== */
+@media (min-width: 1550px) {
+  body {
+    zoom: 1.2;
+  }
+}
