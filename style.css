@@ -98,6 +98,19 @@ h3 {
   font-weight: 700;
 }
 
+.hero-right-col{
+  display: flex;
+  /* text-align: left; */
+  align-items: center;
+  justify-content: end;
+}
+
+@media(max-width : 1200px){
+  .hero-right-col{
+    justify-content: start;
+  }
+}
+
 p {
   font-size: clamp(0.95rem, 1.05vw, 1.0625rem);
   line-height: 1.64;
@@ -357,6 +370,11 @@ p:last-child {
   padding-bottom: 1.5rem;
 }
 
+.quote-aside-left{
+   border-right: 2px solid var(--rule-burgundy);
+border-left: 0;
+}
+
 .quote-aside blockquote {
   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   font-weight: 600;
@@ -364,6 +382,10 @@ p:last-child {
   letter-spacing: -0.02em;
   color: var(--text-burgundy);
   margin-bottom: 1.25rem;
+}
+
+.quote-aside blockquote:last-child {
+  margin-bottom: 0;
 }
 
 .quote-aside-author {
@@ -425,6 +447,26 @@ p:last-child {
   padding-top: 2.25rem;
 }
 
+.emotional-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.emotional-grid .quote-aside {
+  margin-top: 0;
+}
+
+.emotional-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
 .emotional-stmt-1 {
   font-size: clamp(1.8rem, 3.2vw, 2.45rem);
   font-weight: 700;
@@ -468,7 +510,7 @@ p:last-child {
   align-items: baseline;
   padding: 0.95rem 0;
   border-bottom: 1px solid var(--rule-subtle);
-  font-size: 0.975rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 
@@ -540,6 +582,13 @@ p:last-child {
 .compact-cta-strip {
   background-color: var(--bg-burgundy);
   padding: 2rem 0;
+}
+
+@media(min-width : 1440px){
+  .compact-cta-flex{
+       margin: auto;
+    width: 80%;
+  }
 }
 
 .compact-cta-flex {
@@ -806,6 +855,11 @@ p:last-child {
   font-size: 0.95rem;
   font-weight: 700;
   color: #ffffff;
+  max-width: 200px;
+}
+
+.footer-brand img{
+  width: 100%;
 }
 
 .footer-tagline {
@@ -901,6 +955,11 @@ p:last-child {
     gap: 3rem;
   }
 
+  .emotional-grid {
+    grid-template-columns: minmax(260px, 340px) minmax(0, 1.3fr);
+    gap: 3rem;
+  }
+
   .cut-grid {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 500px);
     gap: 3rem;
@@ -916,6 +975,7 @@ p:last-child {
 @media (max-width: 960px) {
   .hero-grid,
   .stop-advice-grid,
+  .emotional-grid,
   .cut-grid,
   .get-back-grid,
   .two-col-layout,
